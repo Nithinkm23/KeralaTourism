@@ -50,3 +50,9 @@ body{
 footer{
   text-align:center;
 }
+#conn{
+  display:inline;
+}
+#connect li{
+display:inline;
+}
