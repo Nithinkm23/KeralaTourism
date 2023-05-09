@@ -3,9 +3,11 @@
 var ct = document.getElementById("contact");
 var eml = document.getElementById("email");
 var passw = document.getElementById("password");
+var conf = document.getElementById("confirm");
 var error1 = document.getElementById("err1");
 var error2 = document.getElementById("err2");
 var error3 = document.getElementById("err3");
+var error4 = document.getElementById("err4");
 
 function pop() {
   if (eml.value == "" || passw.value == "" || ct == "") {
@@ -40,7 +42,7 @@ function validateemail() {
   } else {
     error2.innerText = "Invalid Email id ";
     error2.style.color = "red";
-    alert("Enter valid mail id egs: (abc@xyz.com)")
+    alert("Enter valid mail id egs: (abc@xyz.com)");
     return false;
   }
 }
@@ -57,6 +59,21 @@ function validatepassword() {
       "Password should contain Minimum 8 characters, at least (one uppercase, one lower case, and one number)"
     );
     error3.style.color = "red";
+    return false;
+  }
+}
+function confirmpassword() {
+  
+  if (passw.value==conf.value) {
+    error4.innerText = "Password Confirmed";
+    error4.style.color = "green";
+    return true;
+  } else {
+    error4.innerText = "Invalid Password ";
+    alert(
+      "Password should contain Minimum 8 characters, at least (one uppercase, one lower case, and one number)"
+    );
+    error4.style.color = "red";
     return false;
   }
 }
